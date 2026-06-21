@@ -1,7 +1,4 @@
-import "./globals.css";
-import Home from "./homePage";
 import DashboardLayout from "@/components/layout";
-
 export const metadata = {
     title: "Agus Fathur - Full Stack Developer",
     description: "Personal portfolio website of Agus Fathur, showcasing projects, skills, and contact information.",
@@ -17,10 +14,13 @@ export const metadata = {
     },
 };
 
-export default function HomePage() {
+export default function ContactPage() {
     return (
         <DashboardLayout>
-            <Home />
+            <div className="flex-1 flex flex-col items-center justify-center">
+                <h1 className="text-4xl font-bold mb-4 text-zinc-950">Contact Me</h1>
+                <p className="text-lg text-zinc-600 text-center max-w-xl">Feel free to reach out to me if you have any questions or opportunities!</p>
+            </div>
         </DashboardLayout>
     );
 }

@@ -18,15 +18,15 @@ export default function Home() {
     }, [buildTexts.length]);
 
     return (
-        <section id="content" className="flex-1 p-4 text-zinc-600 mt-4 lg:mt-12">
+        <section id="content" className="flex-1 p-4 text-zinc-600 mt-4 lg:mt-12 xl:mt-20">
             <div className="flex justify-between mx-5">
                 {/* Left side */}
                 <div className="flex flex-col w-full gap-4 lg:w-[40%]">
                     <div className={`text-sm font-mono text-zinc-400 uppercase ${jetBrainsMono.className}`}>Portfolio 2026 / web + automation + AI + GIS</div>
                     <div className={bricolageGrotesque.className}>
-                        <span className="text-4xl lg:text-6xl font-extrabold text-zinc-950">Agus Fathur</span>
+                        <span className="text-4xl lg:text-6xl xl:text-8xl font-extrabold text-zinc-950">Agus Fathur</span>
                     </div>
-                    <div className={`text-zinc-950 text-2xl lg:text-3xl mt-2 lg:mt-5 font-semibold items-center flex ${bricolageGrotesque.className}`}>
+                    <div className={`text-zinc-950 text-2xl lg:text-3xl xl:text-4xl mt-2 lg:mt-5 font-semibold items-center flex ${bricolageGrotesque.className}`}>
                         I build
                         {/* Animated Text */}
                         <div className="inline-block px-2 py-1 bg-black text-white ml-2 overflow-hidden">
@@ -35,10 +35,10 @@ export default function Home() {
                             </span>
                         </div>
                     </div>
-                    <div className={`text-zinc-400 text-sm lg:text-md mt--2 lg:mt-4 ${bricolageGrotesque.className}`}>
+                    <div className={`text-zinc-400 text-sm lg:text-md xl:text-lg mt-2 lg:mt-4 xl:mt-8 ${bricolageGrotesque.className}`}>
                         I build full-stack web products from interface to database, then add automation, AI, data, or GIS when needed.
                     </div>
-                    <div className={`flex sm:flex-row gap-3 sm:gap-4 mt-6 ${jetBrainsMono.className}`}>
+                    <div className={`flex sm:flex-row gap-3 sm:gap-4 mt-6 xl:mt-16 ${jetBrainsMono.className}`}>
                         <Link
                             href="/projects"
                             className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold uppercase text-white bg-black border border-black transition-colors duration-300 ease-in-out hover:bg-zinc-800"
@@ -58,9 +58,9 @@ export default function Home() {
                 </div>
 
                 {/* Profile Picture */}
-                <div className="relative w-[45%] h-80 overflow-hidden hidden lg:block">
+                <div className="relative lg:w-[45%] lg:h-80 xl:h-96 overflow-hidden hidden lg:block">
                     {/* Label */}
-                    <div className="absolute top-5 left-5 z-30 ">
+                    <div className="absolute top-5 left-5 z-30 xl:top-4 xl:left-24">
                         <span
                             className={`inline-block px-3 py-2 border border-black bg-black text-[10px] tracking-[0.2em] text-white 
                                 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer ${jetBrainsMono.className}`}
@@ -87,7 +87,7 @@ export default function Home() {
                                 alt="Profile Picture"
                                 width={260}
                                 height={260}
-                                className=" w-60 h-60 object-cover grayscale transition-all duration-700 cursor-pointer hover:grayscale-0 hover:scale-105"
+                                className=" w-60 h-60 lg:w-80 lg:h-80 object-cover grayscale transition-all duration-700 cursor-pointer hover:grayscale-0 hover:scale-105"
                             />
                         </div>
                     </div>
@@ -96,25 +96,26 @@ export default function Home() {
                     <div className={`absolute bottom-5 left-5 text-[10px] tracking-[0.2em] text-zinc-400 ${jetBrainsMono.className}`}>EST. 2023</div>
 
                     {/* Kotak dekorasi kanan bawah */}
-                    <div className="absolute bottom-6 right-6 w-8 h-8 border border-zinc-400"></div>
+                    <div className="absolute bottom-6 right-6 w-8 h-8 xl:w-10 xl:h-10 xl:bottom-10 xl:right-4 border border-zinc-400"></div>
                 </div>
             </div>
 
-            <div className="relative flex w-[98%]  mx-5 mt-8 border border-zinc-300 ">
+            {/* card section */}
+            <div className="relative flex w-[98%] mx-5 mt-8 border border-zinc-300 lg:mt-20 xl:mt-20">
                 {/* Intro */}
-                <div className="w-[30%] border-r border-zinc-300 p-3 relative overflow-hidden group flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white">
+                <div className="w-[30%] border-r h-40 border-zinc-300 p-3 relative overflow-hidden group flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white">
                     <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-zinc-500/20 blur-3xl"></div>
                     <div className="absolute -bottom-16 -left-16 w-40 h-40 rounded-full bg-zinc-500/20 blur-3xl"></div>
 
                     <div className={`relative z-10 text-md text-zinc-500 font-bold ${jetBrainsMono.className}`}>CAPABILITY MAP</div>
 
-                    <div className={`relative z-10 text-md leading-tight font-bold text-zinc-950 mt-6 group-hover:text-white ${bricolageGrotesque.className}`}>
+                    <div className={`relative z-10 text-md leading-tight font-bold text-zinc-950 mt-6 group-hover:text-white xl:text-2xl ${bricolageGrotesque.className}`}>
                         These are the areas I combine inside projects. They are a quick summary, not page shortcuts.
                     </div>
                 </div>
 
                 {/* Cards */}
-                <div className="flex-1 grid grid-cols-4">
+                <div className="flex-1 grid grid-cols-4 h-40 overflow-hidden">
                     {[
                         {
                             no: "01",
@@ -143,7 +144,7 @@ export default function Home() {
                     ].map((item) => (
                         <div
                             key={item.no}
-                            className="group border-l overflow-hidden relative border-zinc-300 p-3 flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white"
+                            className="group border-l overflow-hidden relative border-zinc-300 p-3  flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white"
                         >
                             <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-zinc-500/20 blur-3xl"></div>
                             <div className="absolute -bottom-16 -left-16 w-28 h-28 rounded-full bg-zinc-500/20 blur-3xl"></div>

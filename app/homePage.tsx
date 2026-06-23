@@ -26,7 +26,7 @@ export default function Home() {
                     <div className={bricolageGrotesque.className}>
                         <span className="text-4xl lg:text-6xl xl:text-8xl font-extrabold text-zinc-950">Agus Fathur</span>
                     </div>
-                    <div className={`text-zinc-950 text-2xl lg:text-3xl xl:text-4xl mt-2 lg:mt-5 font-semibold items-center flex ${bricolageGrotesque.className}`}>
+                    <div className={`text-zinc-950 text-xl lg:text-2xl xl:text-4xl mt-2 lg:mt-5 font-semibold items-center flex ${bricolageGrotesque.className}`}>
                         I build
                         {/* Animated Text */}
                         <div className="inline-block px-2 py-1 bg-black text-white ml-2 overflow-hidden">
@@ -87,16 +87,16 @@ export default function Home() {
                                 alt="Profile Picture"
                                 width={260}
                                 height={260}
-                                className=" w-60 h-60 lg:w-80 lg:h-80 object-cover grayscale transition-all duration-700 cursor-pointer hover:grayscale-0 hover:scale-105"
+                                className="  lg:w-60 lg:h-60  xl:w-80 xl:h-80 object-cover grayscale transition-all duration-700 cursor-pointer hover:grayscale-0 hover:scale-105"
                             />
                         </div>
                     </div>
 
                     {/* Info */}
-                    <div className={`absolute bottom-5 left-5 text-[10px] tracking-[0.2em] text-zinc-400 ${jetBrainsMono.className}`}>EST. 2023</div>
+                    <div className={`absolute bottom-5 left-5 text-[10px] tracking-[0.2em] text-zinc-400 xl:left-28 ${jetBrainsMono.className}`}>EST. 2023</div>
 
                     {/* Kotak dekorasi kanan bawah */}
-                    <div className="absolute bottom-6 right-6 w-8 h-8 xl:w-10 xl:h-10 xl:bottom-10 xl:right-4 border border-zinc-400"></div>
+                    <div className="hidden xl:block absolute bottom-6 right-6 w-8 h-8 xl:w-10 xl:h-10 xl:bottom-10 xl:right-4 border border-zinc-400"></div>
                 </div>
             </div>
 

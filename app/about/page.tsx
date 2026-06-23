@@ -1,15 +1,47 @@
 import DashboardLayout from "@/components/layout";
-import React from "react";
+import { bricolageGrotesque, jetBrainsMono } from "@/components/fonts";
+
+export const metadata = {
+    title: "Agus Fathur - Full Stack Developer",
+    description:
+        "Personal portfolio website of Agus Fathur, showcasing projects, skills, and contact information.",
+    meta: {
+        "og:title": "Agus Fathur - Full Stack Developer",
+        "og:description":
+            "Personal portfolio website of Agus Fathur, showcasing projects, skills, and contact information.",
+        "og:image": "/profile.jpg",
+        "og:url": "https://agusfathur.com",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Agus Fathur - Full Stack Developer",
+        "twitter:description":
+            "Personal portfolio website of Agus Fathur, showcasing projects, skills, and contact information.",
+        "twitter:image": "/profile.jpg",
+    },
+};
 
 export default function AboutPage() {
     return (
         <DashboardLayout>
-            <div className="flex-1 flex flex-col items-center justify-center">
-                <h1 className="text-4xl font-bold mb-4 text-zinc-950">About Me</h1>
-                <p className="text-lg text-zinc-600 text-center max-w-xl">
-                    Hello! I&apos;m Agus Fathur, a passionate Full Stack Developer with a keen interest in automation, AI, and GIS technologies. I enjoy building innovative solutions that make a
-                    difference. Welcome to my personal portfolio website!
-                </p>
+            <div className="flex-1 flex-col px-12 pt-12">
+                {/* Breadcrumb */}
+                <div>
+                    <div
+                        className={`text-md font-mono text-zinc-500 uppercase ${jetBrainsMono.className}`}
+                    >
+                        ABOUT / BACKGROUND
+                    </div>
+                    <div className={`text-5xl text-zinc-950 font-bold leading-[0.9em] mt-5 ${bricolageGrotesque.className}`}>
+                        Full-stack web products, automation, AI workflows, and GIS
+                        systems.
+                    </div>
+                </div>
+
+                {/* Card Content */}
+                <div className="flex gap-6 mt-12">
+                    <div className="w-1/3 h-[500px] border border-zinc-300"></div>
+                    <div className="w-1/3 h-[500px] border border-zinc-300"></div>
+                    <div className="w-1/3 h-[500px] border border-zinc-300"></div>
+                </div>
             </div>
         </DashboardLayout>
     );

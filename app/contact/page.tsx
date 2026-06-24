@@ -31,8 +31,8 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <DashboardLayout>
-      <div className="flex-1 lg:flex md:px-4 items-center w-full h-full xl:px-14">
-        <div className="w-full  xl:w-7/12 mt-20 flex flex-col gap-4 ">
+      <div className="flex-1 lg:flex md:px-4 items-center w-full h-[90%] xl:px-14">
+        <div className="w-full xl:w-7/12 mt-20 xl:mt-0 flex flex-col gap-4 ">
           <span className={`text-sm text-zinc-500 ${jetBrainsMono.className}`}>
             CONTACT
           </span>

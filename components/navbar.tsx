@@ -37,7 +37,7 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <div className="flex h-full mr-6 items-center md:mr-12">
+                <div className="flex h-full mr-6 items-center md:mr-12 md:hidden">
                     <button
                         className=" group flex items-center h-10 px-2 border-2 border-zinc-300 text-zinc-800 font-bold transition-all duration-300 hover:bg-black hover:text-white hover:border-black"
                     >

@@ -18,7 +18,7 @@ export default function Home() {
     }, [buildTexts.length]);
 
     return (
-        <section id="content" className="flex-1 p-4 text-zinc-600 mt-4 lg:mt-12 xl:mt-20">
+        <section id="content" className="flex-1 mr-5 lg:ml-5 text-zinc-600 mt-8 lg:mt-12 xl:mt-20">
             <div className="flex justify-between mx-5">
                 {/* Left side */}
                 <div className="flex flex-col w-full gap-4 lg:w-[40%]">
@@ -101,9 +101,9 @@ export default function Home() {
             </div>
 
             {/* card section */}
-            <div className="relative flex w-[98%] mx-5 mt-8 border border-zinc-300 lg:mt-20 xl:mt-20">
+            <div className="relative block lg:flex w-[98%] mx-5 mt-16 border border-zinc-300 lg:mt-20 xl:mt-20 bottom-0 mb-5">
                 {/* Intro */}
-                <div className="w-[30%] border-r h-40 border-zinc-300 p-3 relative overflow-hidden group flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white">
+                <div className="lg:w-[30%] w-full lg:border-r h-32 lg:h-48 border-b  border-zinc-300 p-3 relative overflow-hidden group flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white">
                     <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-zinc-500/20 blur-3xl"></div>
                     <div className="absolute -bottom-16 -left-16 w-40 h-40 rounded-full bg-zinc-500/20 blur-3xl"></div>
 
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
 
                 {/* Cards */}
-                <div className="flex-1 grid grid-cols-4 h-40 overflow-hidden">
+                <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 lg:h-48 h-72 overflow-hidden">
                     {[
                         {
                             no: "01",
@@ -144,7 +144,7 @@ export default function Home() {
                     ].map((item) => (
                         <div
                             key={item.no}
-                            className="group border-l overflow-hidden relative border-zinc-300 p-3  flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white"
+                            className="group border-l border-b overflow-hidden relative border-zinc-300 p-3  flex flex-col justify-between transition-all duration-300 hover:bg-zinc-950 hover:text-white"
                         >
                             <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-zinc-500/20 blur-3xl"></div>
                             <div className="absolute -bottom-16 -left-16 w-28 h-28 rounded-full bg-zinc-500/20 blur-3xl"></div>

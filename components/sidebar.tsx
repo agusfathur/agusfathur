@@ -31,8 +31,8 @@ export default function Sidebar() {
     
     return (
         <div id="sidebar" className="hidden md:block">
-            <div className="w-44 h-full border-r-2 border-zinc-300 uppercase text-sm font-mono p-4 flex flex-col gap-4 justify-center">
-                <div className={`flex flex-col gap-5 lg:-mt-25 ml-4 ${jetBrainsMono.className}`}>
+            <div className="w-44 relative h-full border-r-2 border-zinc-300 uppercase text-sm font-mono p-4 flex flex-col gap-4 justify-center ">
+                <div className={`flex flex-col gap-5 absolute ml-4 ${jetBrainsMono.className}`}>
                     {menus.map((menu) => {
                         const active = pathname === menu.href;
                         return (

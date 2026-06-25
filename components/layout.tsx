@@ -10,17 +10,18 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
     return (
-      <div className="bg-zinc-100 w-screen h-screen md:p-3">
-        <main className="container-fluid mx-auto bg-zinc-100 w-full h-full rounded-2xl md:border-2 border-zinc-300 overflow-hidden flex flex-col ">
+      <div className="w-full h-screen bg-zinc-100 md:p-3">
+        <main className="h-full bg-zinc-100 rounded-2xl md:border-2 border-zinc-300 flex flex-col overflow-hidden">
           <Navbar />
 
-          <div className="flex flex-1 p-3 md:p-0 ">
+          <div className="flex flex-1 overflow-hidden">
             <Sidebar />
 
-            <div className="flex-1 flex flex-col ">
+            <div className="flex-1 overflow-y-auto">
               <PageTransition>{children}</PageTransition>
             </div>
           </div>
+
           <Footer />
         </main>
       </div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-    const buildTexts = ["full-stack web apps", "automation scripts", "AI-powered tools", "GIS applications"];
+    const buildTexts = ["Full-Stack Web Applications", "RESTful APIs", "Business Systems", "Financial Systems"];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function Home() {
             <div className="flex justify-between mx-5">
                 {/* Left side */}
                 <div className="flex flex-col w-full gap-4 lg:w-[40%]">
-                    <div className={`text-sm font-mono text-zinc-400 uppercase ${jetBrainsMono.className}`}>Portfolio 2026 / web + automation + AI + GIS</div>
+                    <div className={`text-sm font-mono text-zinc-400 uppercase ${jetBrainsMono.className}`}>Portfolio 2026 / Full-Stack Web • REST APIs • Business Systems • Finance</div>
                     <div className={bricolageGrotesque.className}>
                         <span className="text-4xl lg:text-6xl xl:text-8xl font-extrabold text-zinc-950">Agus Fathur</span>
                     </div>
@@ -36,7 +36,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={`text-zinc-400 text-sm lg:text-md xl:text-lg mt-2 lg:mt-4 xl:mt-8 ${bricolageGrotesque.className}`}>
-                        I build full-stack web products from interface to database, then add automation, AI, data, or GIS when needed.
+                        I build full-stack web applications, RESTful APIs, business systems, and financial systems that are scalable, efficient, and tailored to real business needs
                     </div>
                     <div className={`flex sm:flex-row gap-3 sm:gap-4 mt-6 xl:mt-16 ${jetBrainsMono.className}`}>
                         <Link

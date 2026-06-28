@@ -12,23 +12,21 @@ export default function Sidebar() {
     const menus = [
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
-        { href: "/projects", label: "Projects" },
         { href: "/skills", label: "Skills" },
+        { href: "/projects", label: "Projects" },
         { href: "/contact", label: "Contact" },
     ];
 
-    const startTransition = useTransitionStore(
-        (state) => state.startTransition,
-    );
+    const startTransition = useTransitionStore((state) => state.startTransition);
 
-    const navigate = (e : React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    const navigate = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
         e.preventDefault();
         if (pathname === href) return;
 
         startTransition();
         router.push(href);
     };
-    
+
     return (
         <div id="sidebar" className="hidden md:block">
             <div className="w-44 relative h-full border-r-2 border-zinc-300 uppercase text-sm font-mono p-4 flex flex-col gap-4 justify-center ">

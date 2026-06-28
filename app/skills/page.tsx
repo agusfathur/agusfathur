@@ -18,7 +18,8 @@ import {
     SiLaravel,
 } from "react-icons/si";
 import { FaLanguage } from "react-icons/fa";
-const SkillGrid = ({ skills }) => {
+import { JSX } from "react/jsx-runtime";
+const SkillGrid = ({ skills }: { skills: { name: string; icon: JSX.Element }[] }) => {
     return (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {skills.map((skill, index) => (

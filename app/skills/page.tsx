@@ -1,6 +1,6 @@
 import { bricolageGrotesque, jetBrainsMono } from "@/components/fonts";
 import DashboardLayout from "@/components/layout";
-import { FaPhp, FaNode, FaReact, FaDatabase, FaDocker, FaGitAlt } from "react-icons/fa";
+import { FaPhp, FaNode, FaReact, FaDatabase, FaDocker, FaGitAlt, FaBusinessTime, FaFileAlt, FaBrain, FaChartLine, FaUsers, FaLightbulb, FaComments, FaClock, FaHandshake, FaCertificate } from "react-icons/fa";
 import {
     SiTypescript,
     SiNestjs,
@@ -16,12 +16,16 @@ import {
     SiNextdotjs,
     SiBootstrap,
     SiLaravel,
+    SiReact,
+    SiJsonwebtokens,
+    SiPrisma,
 } from "react-icons/si";
 import { FaLanguage } from "react-icons/fa";
 import { JSX } from "react/jsx-runtime";
+import { PiMicrosoftExcelLogo, PiMicrosoftPowerpointLogo, PiMicrosoftWordLogo } from "react-icons/pi";
 const SkillGrid = ({ skills }: { skills: { name: string; icon: JSX.Element }[] }) => {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-8 gap-3">
             {skills.map((skill, index) => (
                 <div
                     key={index}
@@ -92,6 +96,8 @@ export default function SkillsPage() {
                 { name: "NestJS", icon: <SiNestjs className="text-2xl" /> },
                 { name: "Express.js", icon: <SiExpress className="text-2xl" /> },
                 { name: "RESTful API", icon: <FaGitAlt className="text-2xl" /> },
+                { name: "JWT", icon: <SiJsonwebtokens className="text-2xl" /> },
+                { name: "Prisma", icon: <SiPrisma className="text-2xl" /> },
             ],
         },
         {
@@ -101,8 +107,11 @@ export default function SkillsPage() {
                 { name: "TypeScript", icon: <SiTypescript className="text-2xl" /> },
                 { name: "React.js", icon: <FaReact className="text-2xl" /> },
                 { name: "Next.js", icon: <SiNextdotjs className="text-2xl" /> },
+                { name: "Laravel", icon: <SiLaravel className="text-2xl" /> },
+                { name: "CodeIgniter", icon: <SiCodeigniter className="text-2xl" /> },
                 { name: "Tailwind CSS", icon: <SiTailwindcss className="text-2xl" /> },
                 { name: "Bootstrap", icon: <SiBootstrap className="text-2xl" /> },
+                { name: "Zustand State Management", icon: <SiReact className="text-2xl" /> },
             ],
         },
         {
@@ -130,13 +139,22 @@ export default function SkillsPage() {
             ],
         },
         {
+            category: "Office Tools",
+            skills: [
+                { name: "Microsoft Word", icon: <PiMicrosoftWordLogo className="text-2xl" /> },
+                { name: "Microsoft Excel", icon: <PiMicrosoftExcelLogo className="text-2xl" /> },
+                { name: "Microsoft Powerpoint", icon: <PiMicrosoftPowerpointLogo className="text-2xl" /> },
+                { name: "Microsoft Outlook", icon: <PiMicrosoftWordLogo className="text-2xl" /> },
+            ],
+        },
+        {
             category: "Business & Analysis",
             skills: [
-                { name: "Business Analysis", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "System Integration", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Requirements Gathering", icon: <FaGitAlt className="text-2xl" /> },
+                { name: "Business Analysis", icon: <FaBusinessTime className="text-2xl" /> },
+                { name: "System Integration", icon: <FaBusinessTime className="text-2xl" /> },
+                { name: "Requirements Gathering", icon: <FaFileAlt className="text-2xl" /> },
                 { name: "ERD", icon: <FaDatabase className="text-2xl" /> },
-                { name: "API Design", icon: <FaGitAlt className="text-2xl" /> },
+                { name: "API Design", icon: ( <p className={`text-sm ${jetBrainsMono.className}`}>200</p> ), },
                 { name: "Technical Documentation", icon: <FaGitAlt className="text-2xl" /> },
             ],
         },
@@ -146,14 +164,14 @@ export default function SkillsPage() {
         {
             category: "Core Skills",
             skills: [
-                { name: "Problem Solving", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Analytical Thinking", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Leadership", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Initiative", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Cross-Functional Collaboration", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Technical Communication", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Time Management", icon: <FaGitAlt className="text-2xl" /> },
-                { name: "Finance & Business Knowledge", icon: <FaGitAlt className="text-2xl" /> },
+                { name: "Problem Solving", icon: <FaLightbulb className="text-2xl" /> },
+                { name: "Analytical Thinking", icon: <FaBrain className="text-2xl" /> },
+                { name: "Leadership", icon: <FaUsers className="text-2xl" /> },
+                { name: "Initiative", icon: <FaChartLine className="text-2xl" /> },
+                { name: "Cross-Functional Collaboration", icon: <FaHandshake className="text-2xl" /> },
+                { name: "Technical Communication", icon: <FaComments className="text-2xl" /> },
+                { name: "Time Management", icon: <FaClock className="text-2xl" /> },
+                { name: "Finance & Business Knowledge", icon: <FaBusinessTime className="text-2xl" /> },
             ],
         },
         {
@@ -169,7 +187,7 @@ export default function SkillsPage() {
         <DashboardLayout>
             <div className="flex-1 flex-col px-8 md:px-12 pt-12 pb-20">
                 {/* Breadcrumb & Title */}
-                <div className="mb-12">
+                <div className="mb-8">
                     <div className={`text-sm md:text-md font-mono text-zinc-500 uppercase ${jetBrainsMono.className}`}>SKILLS / CAPABILITIES</div>
                     <div className={`text-3xl lg:text-5xl text-zinc-950 font-bold lg:leading-[0.9em] mt-5 ${bricolageGrotesque.className}`}>My Skills & Capabilities</div>
                 </div>

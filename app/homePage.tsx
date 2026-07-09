@@ -48,7 +48,8 @@ export default function Home() {
                         </Link>
 
                         <Link
-                            href="#"
+                            href="/cv.pdf"
+                            target="_blank"
                             className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold uppercase text-zinc-600 border border-zinc-300 transition-colors duration-300 ease-in-out hover:border-black hover:bg-black hover:text-white"
                         >
                             <span>OPEN CV</span>

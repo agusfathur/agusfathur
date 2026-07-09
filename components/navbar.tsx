@@ -1,9 +1,13 @@
+"use client";
 import Image from "next/image";
 import { GitHub, LinkedIn } from "@deemlol/next-icons";
 import { jetBrainsMono } from "@/components/fonts";
-import { BiPlus } from "react-icons/bi";
+import { BiPlus, BiX } from "react-icons/bi";
+import { useMobileMenuStore } from "@/stores/useMobileMenuStore";
 
 export default function Navbar() {
+    const { isOpen, toggleMenu } = useMobileMenuStore();
+
     return (
         <section id="navbar">
             <div className="h-16 w-screen border-b-2 border-zinc-300 flex justify-between">
@@ -39,10 +43,17 @@ export default function Navbar() {
 
                 <div className="flex h-full mr-6 items-center md:mr-12 md:hidden">
                     <button
-                        className=" group flex items-center h-10 px-2 border-2 border-zinc-300 text-zinc-800 font-bold transition-all duration-300 hover:bg-black hover:text-white hover:border-black"
+                        onClick={toggleMenu}
+                        className="group flex items-center h-10 px-2 border-2 border-zinc-300 text-zinc-800 font-bold transition-all duration-300 hover:bg-black hover:text-white hover:border-black"
                     >
-                        <span className={`text-xs ${jetBrainsMono.className}`}>MENU</span>
-                        <BiPlus className="h-5 w-5 transition-colors duration-300 -mt-1" />
+                        <span className={`text-xs ${jetBrainsMono.className}`}>
+                            {isOpen ? "CLOSE" : "MENU"}
+                        </span>
+                        {isOpen ? (
+                            <BiX className="h-5 w-5 transition-colors duration-300" />
+                        ) : (
+                            <BiPlus className="h-5 w-5 transition-colors duration-300 -mt-1" />
+                        )}
                     </button>
                 </div>
             </div>
